@@ -61,8 +61,8 @@ class TestCheckWinner(unittest.TestCase):
         self.board[2][0] = 'X'
         self.assertTrue(check_winner(self.board))
 
-    def test_no_winner_returns_equal(self):
-        self.board[1][1] = 'X'
+    def test_equal(self):
+        self.board = self.board = [['O', 'X', 'X'], ['X', 'X', 'O'], ['O', 'O', 'X']]
         self.assertEqual(check_winner(self.board), 'equal')
 
 
